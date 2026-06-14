@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anurag — Developer Portfolio</title>
+    <meta name="description"
+        content="A modern interactive developer portfolio showcasing projects, skills, and experience." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+</head>
+
+<body>
+    <!-- Three.js 3D Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="main-nav">
+        <div class="nav-logo">blytz<span class="logo-dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+            <li><a href="#achievements" class="nav-link" data-section="achievements">Achievements</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+        <div class="nav-status">
+            <span class="status-dot"></span>
+            <span class="status-text">online</span>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Main Content -->
+    <main id="content">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="section" data-index="0">
+            <div class="section-inner">
+                <div class="hero-content">
+                    <div class="hero-left">
+                        <div class="hero-card">
+                            <span class="hero-greeting">Hey there, I'm</span>
+                            <h1 class="hero-name">ANURAG</h1>
+                            <h2 class="hero-title">
+                                <span class="typing-text" id="typing-target"></span><span class="cursor">|</span>
+                            </h2>
+                            <p class="hero-subtitle">Passionate with a strong focus on building intelligent, data-driven
+                                solutions. Skilled in applying machine learning techniques to solve real-world
+                                problems and continuously improving technical expertise.</p>
+                            <div class="hero-cta">
+                                <a href="#projects" class="cta-primary">View Projects</a>
+                                <a href="#contact" class="cta-secondary">Get In Touch</a>
+                            </div>
+                        </div>
+                        <div class="scroll-indicator">
+                            <div class="mouse">
+                                <div class="wheel"></div>
+                            </div>
+                            <span>Scroll to explore</span>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <!-- Decorative patterns behind image -->
+                        <div class="hero-patterns">
+                            <div class="pattern-ring pattern-ring-1"></div>
+                            <div class="pattern-ring pattern-ring-2"></div>
+                            <div class="pattern-ring pattern-ring-3"></div>
+                            <div class="pattern-dot pattern-dot-1"></div>
+                            <div class="pattern-dot pattern-dot-2"></div>
+                            <div class="pattern-dot pattern-dot-3"></div>
+                            <div class="pattern-dot pattern-dot-4"></div>
+                            <div class="pattern-cross"></div>
+                        </div>
+                        <!-- Illuminati Eye -->
+                        <div class="hero-eye">
+                            <svg viewBox="0 0 64 40" width="48" height="30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 20 Q32 -4 62 20 Q32 44 2 20Z" fill="none" stroke="#28c840" stroke-width="1.5" class="eye-outline" />
+                                <circle cx="32" cy="20" r="10" fill="none" stroke="#28c840" stroke-width="1" class="eye-iris" />
+                                <circle cx="32" cy="20" r="5.5" fill="#28c840" class="eye-pupil" />
+                                <polygon points="32,15 28.5,23 35.5,23" fill="#000000" stroke="#000000" stroke-width="0.5" class="eye-triangle" />
+                                <circle cx="32" cy="18.5" r="1" fill="#000" class="eye-inner-dot" />
+                                <line x1="32" y1="2" x2="32" y2="7" stroke="#28c840" stroke-width="0.8" opacity="0.5" class="eye-ray" />
+                                <line x1="22" y1="4" x2="25" y2="8" stroke="#28c840" stroke-width="0.8" opacity="0.4" class="eye-ray" />
+                                <line x1="42" y1="4" x2="39" y2="8" stroke="#28c840" stroke-width="0.8" opacity="0.4" class="eye-ray" />
+                                <line x1="14" y1="9" x2="19" y2="12" stroke="#28c840" stroke-width="0.8" opacity="0.3" class="eye-ray" />
+                                <line x1="50" y1="9" x2="45" y2="12" stroke="#28c840" stroke-width="0.8" opacity="0.3" class="eye-ray" />
+                            </svg>
+                        </div>
+                        <div class="profile-frame">
+                            <div class="profile-glow"></div>
+                            <img src="profile.jpg" alt="Anurag — Developer" class="profile-img" />
+                            <div class="profile-border"></div>
+                        </div>
+                        <div class="profile-tag">
+                            <span class="status-indicator"></span> ready to code
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section" data-index="1">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-label">Get to know me</span>
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card glass-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="#28c840"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 28V16" />
+                                <path d="M16 16C16 12 13 8 9 8C5 8 3 11 3 14C3 17 5 19 7 19" />
+                                <path d="M16 16C16 12 19 8 23 8C27 8 29 11 29 14C29 17 27 19 25 19" />
+                                <path d="M7 19C5 20 4 22 5 25C6 27 9 28 11 27" />
+                                <path d="M25 19C27 20 28 22 27 25C26 27 23 28 21 27" />
+                                <circle cx="9" cy="12" r="1" fill="#28c840" stroke="none" />
+                                <circle cx="23" cy="12" r="1" fill="#28c840" stroke="none" />
+                                <circle cx="6" cy="22" r="1" fill="#28c840" stroke="none" />
+                                <circle cx="26" cy="22" r="1" fill="#28c840" stroke="none" />
+                            </svg>
+                        </div>
+                        <h3>Fast Learner</h3>
+                        <p>I rapidly adapt to new technologies and frameworks. Constantly evolving, always shipping.</p>
+                    </div>
+                    <div class="about-card glass-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="#28c840"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="4" width="24" height="24" rx="3" />
+                                <line x1="16" y1="4" x2="16" y2="28" />
+                                <line x1="4" y1="16" x2="28" y2="16" />
+                                <path d="M16 11C17.5 11 18.5 12 18.5 13.5C18.5 15 17.5 16 16 16" />
+                                <path d="M11 16C11 17.5 12 18.5 13.5 18.5C15 18.5 16 17.5 16 16" />
+                                <circle cx="10" cy="10" r="1.5" fill="#28c840" stroke="none" />
+                                <circle cx="22" cy="22" r="1.5" fill="#28c840" stroke="none" />
+                            </svg>
+                        </div>
+                        <h3>Problem Solver</h3>
+                        <p>Complex challenges excite me. I break down problems into elegant, maintainable solutions.</p>
+                    </div>
+                    <div class="about-card glass-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="#28c840"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 24C5 14.1 12.2 6 16 6C19.8 6 27 14.1 27 24" />
+                                <line x1="5" y1="24" x2="27" y2="24" />
+                                <line x1="16" y1="24" x2="22" y2="12" />
+                                <circle cx="16" cy="24" r="2.5" fill="#28c840" stroke="none" />
+                                <line x1="8" y1="14" x2="10" y2="16" />
+                                <line x1="16" y1="7" x2="16" y2="10" />
+                                <line x1="24" y1="14" x2="22" y2="16" />
+                            </svg>
+                        </div>
+                        <h3>Performance Focused</h3>
+                        <p>Every millisecond matters. I optimize for speed, accessibility, and user experience.</p>
+                    </div>
+                    <div class="about-card glass-card">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="#28c840"
+                                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 24 Q10 4 16 16 Q22 28 28 8" />
+                                <circle cx="4" cy="24" r="2.5" />
+                                <circle cx="28" cy="8" r="2.5" />
+                                <line x1="4" y1="24" x2="10" y2="4" stroke-dasharray="2 2" opacity="0.5" />
+                                <line x1="28" y1="8" x2="22" y2="28" stroke-dasharray="2 2" opacity="0.5" />
+                                <circle cx="10" cy="4" r="1.5" fill="#28c840" stroke="none" />
+                                <circle cx="22" cy="28" r="1.5" fill="#28c840" stroke="none" />
+                            </svg>
+                        </div>
+                        <h3>Design-Minded</h3>
+                        <p>I bridge the gap between design and code, creating interfaces that are both beautiful and
+                            functional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="section" data-index="2">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-label">What I work with</span>
+                    <h2>Tech Stack</h2>
+                </div>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3 class="category-label">Frontend</h3>
+                        <div class="skill-pills">
+                            <span class="skill-pill" data-level="95">JavaScript</span>
+                            <span class="skill-pill" data-level="90">TypeScript</span>
+                            <span class="skill-pill" data-level="92">React</span>
+                            <span class="skill-pill" data-level="85">Next.js</span>
+                            <span class="skill-pill" data-level="88">Vue.js</span>
+                            <span class="skill-pill" data-level="95">HTML/CSS</span>
+                            <span class="skill-pill" data-level="80">Three.js</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="category-label">Backend</h3>
+                        <div class="skill-pills">
+                            <span class="skill-pill" data-level="90">Node.js</span>
+                            <span class="skill-pill" data-level="85">Python 3</span>
+                            <span class="skill-pill" data-level="80">Pandas</span>
+                            <span class="skill-pill" data-level="82">Java</span>
+                            <span class="skill-pill" data-level="82">Go</span>
+                            <span class="skill-pill" data-level="78">Rust</span>
+                            <span class="skill-pill" data-level="88">PostgreSQL</span>
+                            <span class="skill-pill" data-level="85">MySQL</span>
+                            <span class="skill-pill" data-level="84">MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="category-label">DevOps &amp; Tools</h3>
+                        <div class="skill-pills">
+                            <span class="skill-pill" data-level="88">Docker</span>
+                            <span class="skill-pill" data-level="80">Kubernetes</span>
+                            <span class="skill-pill" data-level="92">Git</span>
+                            <span class="skill-pill" data-level="85">AWS</span>
+                            <span class="skill-pill" data-level="82">CI/CD</span>
+                            <span class="skill-pill" data-level="90">Linux</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="category-label">Creative & Design</h3>
+                        <div class="skill-pills">
+                            <span class="skill-pill" data-level="85">Adobe Photoshop</span>
+                            <span class="skill-pill" data-level="82">Adobe Premiere Pro</span>
+                            <span class="skill-pill" data-level="78">Blender</span>
+                            <span class="skill-pill" data-level="88">Video Editing</span>
+                            <span class="skill-pill" data-level="80">Audio Editing</span>
+                            <span class="skill-pill" data-level="85">Thumbnail Creation</span>
+                            <span class="skill-pill" data-level="75">Trending Searches</span>
+                            <span class="skill-pill" data-level="88">Figma</span>
+                            <span class="skill-pill" data-level="85">Canva</span>
+                            <span class="skill-pill" data-level="82">Content Writing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="section" data-index="3">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-label">My expertise</span>
+                    <h2>Experience</h2>
+                </div>
+                <div class="experience-container">
+
+                    <!-- Web Development -->
+                    <div class="exp-card glass-card">
+                        <div class="exp-header">
+                            <div class="exp-icon">
+                                <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="#28c840" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="6" width="26" height="18" rx="2" />
+                                    <polyline points="9 14 13 10 9 6" transform="translate(0,4)" />
+                                    <line x1="16" y1="18" x2="22" y2="18" />
+                                    <line x1="3" y1="22" x2="29" y2="22" />
+                                    <circle cx="16" cy="26" r="1" fill="#28c840" stroke="none" />
+                                </svg>
+                            </div>
+                            <div class="exp-info">
+                                <h3>Web Development</h3>
+                                <span class="exp-level">Advanced</span>
+                            </div>
+                            <span class="exp-percent">85%</span>
+                        </div>
+                        <div class="exp-bar-track">
+                            <div class="exp-bar-fill" data-percent="85"></div>
+                        </div>
+                        <p class="exp-desc">HTML, CSS, JavaScript, React, Next.js — building responsive, performant front-end experiences.</p>
+                    </div>
+
+                    <!-- Discord Bot Development -->
+                    <div class="exp-card glass-card">
+                        <div class="exp-header">
+                            <div class="exp-icon">
+                                <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="#28c840" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12.3 7.5C14 6.8 15.9 6.5 16 6.5c0.1 0 2 0.3 3.7 1" />
+                                    <path d="M8 10.5c1-0.8 2.5-1.5 4-1.8" />
+                                    <path d="M24 10.5c-1-0.8-2.5-1.5-4-1.8" />
+                                    <path d="M6 17c0.3 3 1.5 5.5 3.5 7.5l-1 3 3.5-1.5c1.3 0.5 2.6 0.7 4 0.7s2.7-0.2 4-0.7l3.5 1.5-1-3c2-2 3.2-4.5 3.5-7.5" />
+                                    <path d="M6 17c-0.1-1.5 0.2-3 0.8-4.3C8 10 10.5 8.5 12 8.7" />
+                                    <path d="M26 17c0.1-1.5-0.2-3-0.8-4.3C24 10 21.5 8.5 20 8.7" />
+                                    <circle cx="12.5" cy="17" r="2" fill="#28c840" stroke="none" />
+                                    <circle cx="19.5" cy="17" r="2" fill="#28c840" stroke="none" />
+                                </svg>
+                            </div>
+                            <div class="exp-info">
+                                <h3>Discord Bot Dev</h3>
+                                <span class="exp-level">Expert</span>
+                            </div>
+                            <span class="exp-percent">90%</span>
+                        </div>
+                        <div class="exp-bar-track">
+                            <div class="exp-bar-fill" data-percent="90"></div>
+                        </div>
+                        <p class="exp-desc">Node.js, Discord.js, MongoDB — moderation bots, mini-games, leaderboards, and rich interactions.</p>
+                    </div>
+
+                    <!-- Lua Scripts Dev -->
+                    <div class="exp-card glass-card">
+                        <div class="exp-header">
+                            <div class="exp-icon">
+                                <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="#28c840" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="16" cy="18" r="10" />
+                                    <circle cx="22" cy="10" r="4" />
+                                    <circle cx="13" cy="18" r="3" fill="#28c840" stroke="none" />
+                                </svg>
+                            </div>
+                            <div class="exp-info">
+                                <h3>Lua Scripts Dev</h3>
+                                <span class="exp-level">Intermediate</span>
+                            </div>
+                            <span class="exp-percent">75%</span>
+                        </div>
+                        <div class="exp-bar-track">
+                            <div class="exp-bar-fill" data-percent="75"></div>
+                        </div>
+                        <p class="exp-desc">Roblox scripting, game mechanics, FiveM resources — turning ideas into interactive game experiences.</p>
+                    </div>
+
+                    <!-- Tools & Platforms -->
+                    <div class="exp-card glass-card">
+                        <div class="exp-header">
+                            <div class="exp-icon">
+                                <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="#28c840" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14.7 7.3L7.3 14.7c-0.4 0.4-0.4 1 0 1.4l9.6 9.6c0.4 0.4 1 0.4 1.4 0l7.4-7.4c0.4-0.4 0.4-1 0-1.4l-9.6-9.6C15.7 6.9 15.1 6.9 14.7 7.3z" />
+                                    <path d="M4 28l4.5-4.5" />
+                                    <circle cx="16" cy="16" r="3" fill="#28c840" stroke="none" />
+                                    <line x1="16" y1="11" x2="16" y2="13" />
+                                    <line x1="16" y1="19" x2="16" y2="21" />
+                                    <line x1="11" y1="16" x2="13" y2="16" />
+                                    <line x1="19" y1="16" x2="21" y2="16" />
+                                </svg>
+                            </div>
+                            <div class="exp-info">
+                                <h3>Tools & Platforms</h3>
+                                <span class="exp-level">Advanced</span>
+                            </div>
+                            <span class="exp-percent">80%</span>
+                        </div>
+                        <div class="exp-bar-track">
+                            <div class="exp-bar-fill" data-percent="80"></div>
+                        </div>
+                        <p class="exp-desc">Git, VS Code, Docker, Linux, CI/CD, cloud hosting — streamlined development workflows.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section" data-index="4">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-label">Things I've built</span>
+                    <h2>Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1437663110134632509&permissions=564189320014870&integration_type=0&scope=bot" target="_blank" class="project-card glass-card" id="project-1" style="text-decoration:none;color:inherit;cursor:pointer;">
+                        <div class="project-header">
+                            <span class="project-number">01</span>
+                            <div class="project-links">
+                                <span class="project-link" title="Invite Bot">↗</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Discord Bot</h3>
+                        <p class="project-desc">A feature-rich Discord bot with moderation tools, mini-games like Tic-Tac-Toe & PFP Battle, leaderboards, warn system, and more.</p>
+                        <div class="project-tech">
+                            <span>Node.js</span><span>Discord.js</span><span>MongoDB</span><span>JavaScript</span>
+                        </div>
+                    </a>
+                    <div class="project-card glass-card" id="project-2">
+                        <div class="project-header">
+                            <span class="project-number">02</span>
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="GitHub">⟨/⟩</a>
+                                <a href="#" class="project-link" title="Live">↗</a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Cloud Orchestrator</h3>
+                        <p class="project-desc">Kubernetes-native deployment platform with drag-and-drop pipeline
+                            builder, real-time monitoring, and auto-scaling capabilities.</p>
+                        <div class="project-tech">
+                            <span>Go</span><span>K8s</span><span>gRPC</span><span>React</span>
+                        </div>
+                    </div>
+                    <div class="project-card glass-card" id="project-3">
+                        <div class="project-header">
+                            <span class="project-number">03</span>
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="GitHub">⟨/⟩</a>
+                                <a href="#" class="project-link" title="Live">↗</a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">CryptoFlow Dashboard</h3>
+                        <p class="project-desc">Real-time cryptocurrency analytics dashboard with 3D data
+                            visualizations, predictive charts, and portfolio tracking.</p>
+                        <div class="project-tech">
+                            <span>Next.js</span><span>D3.js</span><span>Node.js</span><span>WebGL</span>
+                        </div>
+                    </div>
+                    <a href="https://gamevaultz.netlify.app/" target="_blank" class="project-card glass-card" id="project-4" style="text-decoration:none;color:inherit;cursor:pointer;">
+                        <div class="project-header">
+                            <span class="project-number">04</span>
+                            <div class="project-links">
+                                <span class="project-link" title="Live Site">↗</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">GameVault</h3>
+                        <p class="project-desc">A game discovery platform to explore, search, and track your favorite games with rich details, trailers, and curated collections.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span><span>RAWG API</span><span>HTML/CSS</span><span>Netlify</span>
+                        </div>
+                    </a>
+                    <a href="https://tripcraft1410.netlify.app/" target="_blank" class="project-card glass-card" id="project-5" style="text-decoration:none;color:inherit;cursor:pointer;">
+                        <div class="project-header">
+                            <span class="project-number">05</span>
+                            <div class="project-links">
+                                <span class="project-link" title="Live Site">↗</span>
+                            </div>
+                        </div>
+                        <h3 class="project-title">TripCraft</h3>
+                        <p class="project-desc">A travel planning web app to craft, organize, and visualize your trips with smart itineraries and seamless destination discovery.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span><span>HTML/CSS</span><span>APIs</span><span>Netlify</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS SECTION -->
+        <section id="achievements" class="section" data-index="5">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-label">Recognition & Credentials</span>
+                    <h2>Achievements</h2>
+                </div>
+                <div class="achievements-grid">
+
+                    <!-- 50 Days Badge 2026 -->
+                    <div class="achievement-card glass-card" id="achievement-1">
+                        <div class="achievement-badge-wrapper">
+                            <div class="achievement-glow"></div>
+                            <img src="badge-50-days-2026.jpg" alt="50 Days Badge 2026" class="achievement-badge-img" />
+                        </div>
+                        <div class="achievement-info">
+                            <h3 class="achievement-title">50 Days Badge 2026</h3>
+                            <span class="achievement-issuer">LeetCode</span>
+                            <p class="achievement-desc">Completed a 50-day coding streak, solving problems consistently every day.</p>
+                        </div>
+                    </div>
+
+                    <!-- Introduction to Pandas -->
+                    <div class="achievement-card glass-card" id="achievement-2">
+                        <div class="achievement-badge-wrapper">
+                            <div class="achievement-glow"></div>
+                            <img src="badge-intro-pandas.png" alt="Introduction to Pandas Badge" class="achievement-badge-img" />
+                        </div>
+                        <div class="achievement-info">
+                            <h3 class="achievement-title">Introduction to Pandas</h3>
+                            <span class="achievement-issuer">Kaggle</span>
+                            <p class="achievement-desc">Mastered the fundamentals of Pandas for data manipulation and analysis in Python.</p>
+                        </div>
+                    </div>
+
+                    <!-- AWS Academy Graduate -->
+                    <div class="achievement-card glass-card" id="achievement-3">
+                        <div class="achievement-badge-wrapper">
+                            <div class="achievement-glow"></div>
+                            <img src="badge-aws-data-engineering.png" alt="AWS Academy Graduate - Data Engineering Badge" class="achievement-badge-img" />
+                        </div>
+                        <div class="achievement-info">
+                            <h3 class="achievement-title">AWS Academy Graduate</h3>
+                            <span class="achievement-issuer">Amazon Web Services</span>
+                            <p class="achievement-desc">Completed the Data Engineering training — designing data pipelines & cloud solutions on AWS.</p>
+                        </div>
+                    </div>
+
+                    <!-- IT Specialist -->
+                    <div class="achievement-card glass-card" id="achievement-4">
+                        <div class="achievement-badge-wrapper">
+                            <div class="achievement-glow"></div>
+                            <img src="badge-it-specialist-html-css.png" alt="IT Specialist - HTML and CSS Badge" class="achievement-badge-img" />
+                        </div>
+                        <div class="achievement-info">
+                            <h3 class="achievement-title">IT Specialist — HTML & CSS</h3>
+                            <span class="achievement-issuer">Certiport · Pearson VUE</span>
+                            <p class="achievement-desc">Industry-recognized certification validating front-end web development proficiency.</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Binary Search Study Plan — In Progress -->
+                    <div class="achievement-card glass-card in-progress" id="achievement-5">
+                        <div class="achievement-badge-wrapper">
+                            <div class="achievement-glow in-progress-glow"></div>
+                            <img src="badge-binary-search.png" alt="Binary Search Study Plan Badge" class="achievement-badge-img" />
+                        </div>
+                        <div class="achievement-info">
+                            <div class="achievement-status-row">
+                                <h3 class="achievement-title">Binary Search Study Plan</h3>
+                                <span class="achievement-status-badge">In Progress</span>
+                            </div>
+                            <span class="achievement-issuer">LeetCode</span>
+                            <p class="achievement-desc">Mastering binary search patterns — from basics to advanced divide-and-conquer problems.</p>
+                            <div class="achievement-progress-track">
+                                <div class="achievement-progress-fill" data-progress="60"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 30 Days of Pandas — In Progress -->
+                    <div class="achievement-card glass-card in-progress" id="achievement-6">
+                        <div class="achievement-badge-wrapper">
+                            <div class="achievement-glow in-progress-glow"></div>
+                            <img src="badge-30-days-pandas.png" alt="30 Days of Pandas Badge" class="achievement-badge-img" />
+                        </div>
+                        <div class="achievement-info">
+                            <div class="achievement-status-row">
+                                <h3 class="achievement-title">30 Days of Pandas</h3>
+                                <span class="achievement-status-badge">In Progress</span>
+                            </div>
+                            <span class="achievement-issuer">LeetCode</span>
+                            <p class="achievement-desc">30-day deep dive into Pandas — data filtering, grouping, joining, and reshaping challenges.</p>
+                            <div class="achievement-progress-track">
+                                <div class="achievement-progress-fill" data-progress="45"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LeetCode 75 — In Progress -->
+                    <div class="achievement-card glass-card in-progress" id="achievement-7">
+                        <div class="achievement-badge-wrapper">
+                            <div class="achievement-glow in-progress-glow"></div>
+                            <img src="badge-leetcode-75.png" alt="LeetCode 75 Badge" class="achievement-badge-img" />
+                        </div>
+                        <div class="achievement-info">
+                            <div class="achievement-status-row">
+                                <h3 class="achievement-title">LeetCode 75</h3>
+                                <span class="achievement-status-badge">In Progress</span>
+                            </div>
+                            <span class="achievement-issuer">LeetCode</span>
+                            <p class="achievement-desc">Working through the curated 75-problem set covering arrays, trees, graphs, DP, and more.</p>
+                            <div class="achievement-progress-track">
+                                <div class="achievement-progress-fill" data-progress="35"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section" data-index="6">
+            <div class="section-inner">
+                <div class="section-header">
+                    <span class="section-label">Let's connect</span>
+                    <h2>Get In Touch</h2>
+                </div>
+                <div class="contact-card glass-card">
+                    <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit"
+                        method="POST">
+                        <input type="hidden" name="access_key" value="f9153e87-8d8e-4287-a6e2-d82f963af85b">
+                        <input type="hidden" name="subject" value="New message from Portfolio">
+                        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="What's on your mind?"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Anurag1410j" target="_blank" class="social-link glass-card"
+                        title="GitHub">
+                        <span class="social-icon">⟨/⟩</span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="#" class="social-link glass-card" title="LinkedIn">
+                        <span class="social-icon">in</span>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://discord.com/users/1418613878052360345" target="_blank"
+                        class="social-link glass-card" title="Discord">
+                        <span class="social-icon">⟐</span>
+                        <span>Discord</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>Built with <span class="heart">♥</span> and lots of <span class="coffee">☕</span></p>
+        <p class="copyright">© 2026 blytz — All rights reserved.</p>
+    </footer>
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
